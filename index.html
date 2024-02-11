@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="sidebar">
+        <div class="logo-details">
+            <i class='bx bx-buildings'></i>
+            <span class="logo_name">BWC</span>
+        </div>
+        <ul class="nav-links">
+            <li>
+                <a href="#">
+                    <i class='bx bx-grid-alt'></i>
+                    <span class="link_name">Dashboard</span>
+                </a>
+                <ul class="sub-menu">
+                    <li><a class='link_name blank' href="#">Dashboard</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-user-pin'></i>
+                    <span class="link_name">Tradeperson</span>
+                </a>
+                <ul class="sub-menu">
+                    <li><a class='link_name blank' href="#">Tradeperson</a></li>
+                </ul>
+            </li>
+            </li>
+            <li>
+                <div class="icon-link">
+                    <a href="#">
+                        <i class='bx bx-select-multiple'></i>
+                        <span class="link_name">Create job</span>
+                        <i class='bx bxs-chevron-down arrow'></i>
+                    </a>
+                </div>
+                <ul class="sub-menu">
+                    <li><a class='link_name' href="#">Create job</a></li>
+                    <li><a href="#">Job one</a></li>
+                    <li><a href="#">Job two</a></li>
+                    <li><a href="#">Job three</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-history'></i>
+                    <span class="link_name">Job history</span>
+                </a>
+                <ul class="sub-menu">
+                    <li><a class='link_name blank' href="#">Job history</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-bell'></i>
+                    <span class="link_name">Suppliers</span>
+                </a>
+                <ul class="sub-menu">
+                    <li><a class='link_name blank' href="#">Suppliers</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-message-rounded-dots'></i>
+                    <span class="link_name">Message</span>
+                </a>
+                <ul class="sub-menu">
+                    <li><a class='link_name blank' href="#">Message</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-envelope'></i>
+                    <span class="link_name">Insurances</span>
+                </a>
+                <ul class="sub-menu">
+                    <li><a class='link_name blank' href="#">Insurances</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-cog'></i>
+                    <span class="link_name">Settings</span>
+                </a>
+                <ul class="sub-menu">
+                    <li><a class='link_name blank' href="#">Settings</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-help-circle'></i>
+                    <span class="link_name">Helo & Support</span>
+                </a>
+                <ul class="sub-menu">
+                    <li><a class='link_name blank' href="#">Helo & Support</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="profile-details">
+                    <div class="profile-content">
+                        <img src="P1.png" alt="profile" />
+                    </div>
+
+                    <div class="name-job">
+                        <div class="profile_name">Jahangir Alom</div>
+                        <div class="job">Consumer</div>
+                    </div>
+                    <i class='bx bx-log-out'></i>
+
+                </div>
+            </li>
+        </ul>
+    </div>
+    <section class="home-section">
+        <div class="home-content">
+            <i class="bx bx-menu"></i>
+            <span class="text">Dropdown sidebar</span>
+        </div>
+    </section>
+
+    <script>
+        let arrow = document.querySelectorAll(".arrow");
+        for (var i = 0; i < arrow.length; i++) {
+            arrow[i].addEventListener("click", (e) => {
+                console.log(e);
+                let arrowParent = e.target.parentElement.parentElement.parentElement;
+                console.log(arrowParent);
+                arrowParent.classList.toggle("showMenu")
+            })
+        }
+
+        let sidebar = document.querySelector(".sidebar");
+        let sidebarBtn = document.querySelector(".bx-menu");
+        console.log(sidebarBtn)
+        sidebarBtn.addEventListener("click", () => {
+            sidebar.classList.toggle("close");
+        })
+
+    </script>
+</body>
+
+</html>
